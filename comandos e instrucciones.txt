@@ -1,0 +1,60 @@
+echo "" &&  && echo ""
+echo -n "kpi_" && echo "inicio"&& pdc_kpi.pl -n 60 -i 60 && echo -n "kpi_" && echo "fin"
+
+echo -n "alarmas_" && echo "inicio"&& gsh show_fm_alarm | awk '{print $1 " " $2 " " $3 " " $5 }'  && echo -n "alarmas_" && echo "fin"
+echo -n "eventos_" && echo "inicio"&& gsh list_events |awk '{print $1 }' |sort | uniq -c && echo -n "eventos_" && echo "fin"
+echo -n "enodeb_" && echo "inicio"&& gsh show_mme_global_enodeb -ens disconnected && echo -n "enodeb_" && echo "fin"
+echo -n "diameter_" && echo "inicio"&& gsh list_diameter_peer -sip '' -status '' -pn '' -rhn '' && echo -n "diameter_" && echo "fin"
+echo -n "CPU_" && echo "inicio"&& gsh get_eq_cpu_load && echo -n "CPU_" && echo "fin"
+echo -n "HW_" && echo "inicio"&& hw_status && echo -n "HW_" && echo "fin"
+echo -n "ip_" && echo "inicio"&& getAll_ip_if && echo -n "ip_" && echo "fin"
+echo -n "kpi_" && echo "inicio"&& pdc_kpi.pl -n 60 -i 60 && echo -n "kpi_" && echo "fin"
+
+
+echo -n "RNC_" && echo "inicio"&& rnc_status  && echo -n "NC_" && echo "fin"
+echo -n "SS7_" && echo "inicio"&& ss7_status && echo -n "SS7_" && echo "fin"
+echo -n "sctp_" && echo "inicio"&& sctp_status && echo -n "sctp_" && echo "fin"
+echo -n "kpi_" && echo "inicio"&& pdc_kpi.pl -n 60 -i 60 && echo -n "kpi_" && echo "fin"
+
+
+
+instalar pandas en python
+https://blog.hubspot.es/website/que-es-pandas-python
+
+instalar dash
+https://dash.plotly.com/installation
+
+pip install pandas
+pip install dash
+Pip install dash-html-components==0.13.2
+pip install dash-core-components==0.33.0
+pip install dash-bootstrap-components
+pip install dash-ag-grid
+pip install dash --upgrade
+
+
+
+
+
+-------------------------------
+
+comandos finales
+echo -n "alarmas_" && echo "inicio"&& gsh list_alarms | awk '{print $2 " " $3 " " $4 " " $6 }'  && echo -n "alarmas_" && echo "fin"
+echo -n "eventos_" && echo "inicio"&& gsh list_events |awk '{print $1 }'  |sort | uniq -c && echo -n "eventos_" && echo "fin"
+echo -n "enodeb_" && echo "inicio"&& gsh show_mme_global_enodeb -ens disconnected && echo -n "enodeb_" && echo "fin"
+echo -n "diameter_" && echo "inicio"&& gsh list_diameter_peer -sip '' -status '' -pn '' -rhn '' && echo -n "diameter_" && echo "fin"
+echo -n "CPU_" && echo "inicio"&& gsh get_eq_cpu_load && echo -n "CPU_" && echo "fin"
+echo -n "HW_" && echo "inicio"&& hw_status && echo -n "HW_" && echo "fin"
+echo -n "ip_" && echo "inicio"&& getAll_ip_if && echo -n "ip_" && echo "fin"
+echo -n "kpi_" && echo "inicio"&& pdc_kpi.pl -n 60 -i 60 && echo -n "kpi_" && echo "fin"
+
+
+
+pip install dash==2.17.0
+pip install dash-auth==2.0.0
+
+
+
+
+
+
